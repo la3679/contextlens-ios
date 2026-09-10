@@ -18,7 +18,7 @@ Status: design decisions, not implemented behavior.
 3. Start with deterministic local and mock providers. Add Apple on-device model support only when real SDK and runtime capability checks support it. Report unavailable capabilities truthfully.
 4. Cloud processing goes through a policy boundary and `CloudIntelligenceProvider` to the backend over HTTPS outside local development. Local-only mode prohibits transmission. Results retain processing provenance.
 5. Search uses a local embedding abstraction, deterministic test embeddings, similarity ranking, filters, and snippets. Choose a real local embedding implementation only after feasibility and quality validation. No external vector database is required.
-6. Do not choose an OpenAI model from memory during setup. `OPENAI_MODEL` remains unconfigured until official SDK/model documentation is checked during integration.
+6. Use the backend default `gpt-5.4-mini-2026-03-17` when `OPENAI_MODEL` is missing or blank; preserve explicit overrides. See [model selection](model-selection.md) for official sources and the evaluation rationale. Account access and live quality are not established by configuration tests.
 7. The gateway deployment boundary must include an intentional client-access and abuse-control strategy before public exposure; the provider API key is never a client credential.
 
 ## Evidence gates
