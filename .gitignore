@@ -1,0 +1,108 @@
+# Secrets / local environment
+.env
+.env.*
+!.env.example
+backend/.env
+backend/.env.*
+!backend/.env.example
+
+# Xcode / Swift local state
+DerivedData/
+.build/
+.swiftpm/
+xcuserdata/
+*.xcuserstate
+*.xccheckout
+*.xcscmblueprint
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+Desktop.ini
+
+# Python/backend
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# IDE/editor
+.vscode/
+.idea/
+
+# Test/build artifacts
+artifacts/
+TestResults/
+*.xcresult
+coverage/
+logs/
+*.log
+
+# Local AI/Codex/Claude/agent working state
+.codex/
+.claude/
+.agents/
+agents/
+claude/
+codex/
+.local-ai/
+.ai-work/
+
+# Local plans/checkpoints/session notes
+CHECKPOINT.md
+PLAN.md
+SESSION_LOG.md
+TODO_LOCAL.md
+*_CHECKPOINT.md
+*_PLAN.md
+*_SESSION.md
+checkpoints/
+plans/
+scratch/
+
+# Graph / indexing caches if generated locally
+.graphify/
+.graphify-cache/
+# Additional local secrets, signing material, and generated output
+secrets/
+*.pem
+*.key
+*.p12
+*.p8
+*.mobileprovision
+*.keystore
+build/
+dist/
+*.egg-info/
+.coverage.*
+.tox/
+.hypothesis/
+node_modules/
+*.ipa
+*.dSYM/
+*.xcarchive/
+*.tmp
+*.temp
+*.bak
+tmp/
+temp/
+# Agent names must remain ignored even on case-sensitive hosts
+[Aa][Gg][Ee][Nn][Tt][Ss]/
+[Cc][Oo][Dd][Ee][Xx]/
+[Cc][Ll][Aa][Uu][Dd][Ee]/
+AGENTS.md
+CLAUDE.md
+GEMINI.md
+DECISIONS_LOCAL.md
+ContextLens_Codex_Master_Prompt.md
+.cursor/
+# Graphify's installed CLI uses this output location
+graphify-out/
+.graphify*
