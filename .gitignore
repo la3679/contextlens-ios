@@ -106,3 +106,5 @@ ContextLens_Codex_Master_Prompt.md
 # Graphify's installed CLI uses this output location
 graphify-out/
 .graphify*
+# Reproducibly generated from project.yml in CI
+/ContextLens.xcodeproj/
